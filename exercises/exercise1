@@ -1,0 +1,240 @@
+[8] pry(main)> Brewery
+=> Brewery(id: integer, name: string, year: integer, created_at: datetime, updated_at: datetime)
+[9] pry(main)> Brewery.create name:"BrewDog", year:2007
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "breweries" ("name", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "BrewDog"], ["year", 2007], ["created_at", "2017-01-28 13:03:40.053834"], ["updated_at", "2017-01-28 13:03:40.053834"]]
+   (14.0ms)  commit transaction
+=> #<Brewery:0x005598d87b6760
+ id: 4,
+ name: "BrewDog",
+ year: 2007,
+ created_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00,
+ updated_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00>
+[10] pry(main)> b = Brewery.where name:"BrewDog"
+  Brewery Load (0.3ms)  SELECT "breweries".* FROM "breweries" WHERE "breweries"."name" = ?  [["name", "BrewDog"]]
+=> [#<Brewery:0x005598d9b71728
+  id: 4,
+  name: "BrewDog",
+  year: 2007,
+  created_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00>]
+[11] pry(main)> Beer.create name:"Punk IPA", style:"IPA", brewery_id:b.id
+NoMethodError: undefined method `id' for #<Brewery::ActiveRecord_Relation:0x005598d9a84180>
+Did you mean?  ids
+from /home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.7/lib/active_record/relation/delegation.rb:136:in `method_missing'
+[12] pry(main)> b
+=> [#<Brewery:0x005598d9b71728
+  id: 4,
+  name: "BrewDog",
+  year: 2007,
+  created_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00>]
+[13] pry(main)> b.id
+NoMethodError: undefined method `id' for #<Brewery::ActiveRecord_Relation:0x005598d9a84180>
+Did you mean?  ids
+from /home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.7/lib/active_record/relation/delegation.rb:136:in `method_missing'
+[14] pry(main)> reload!
+Reloading...
+=> true
+[15] pry(main)> Beer.create name:"Punk IPA", style:"IPA", brewery_id:b.id
+NoMethodError: undefined method `id' for #<Brewery::ActiveRecord_Relation:0x005598d9a84180>
+Did you mean?  ids
+from /home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.7/lib/active_record/relation/delegation.rb:136:in `method_missing'
+[16] pry(main)> b.year
+NoMethodError: undefined method `year' for #<Brewery::ActiveRecord_Relation:0x005598d9a84180>
+from /home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.7/lib/active_record/relation/delegation.rb:136:in `method_missing'
+[17] pry(main)> Brewery
+=> Brewery (call 'Brewery.connection' to establish a connection)
+[18] pry(main)> Brewery.count
+   (0.1ms)  SELECT COUNT(*) FROM "breweries"
+=> 4
+[19] pry(main)> Brewery
+=> Brewery(id: integer, name: string, year: integer, created_at: datetime, updated_at: datetime)
+[20] pry(main)> Beer.create name:"Punk IPA", style:"IPA", brewery_id:b.id
+NoMethodError: undefined method `id' for #<Brewery::ActiveRecord_Relation:0x005598d9a84180>
+Did you mean?  ids
+from /home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.7/lib/active_record/relation/delegation.rb:136:in `method_missing'
+[21] pry(main)> Brewery.id
+NoMethodError: undefined method `id' for #<Class:0x005598db40eab0>
+Did you mean?  ids
+from /home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.7/lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+[22] pry(main)> k = Brewery.first
+  Brewery Load (0.1ms)  SELECT  "breweries".* FROM "breweries"  ORDER BY "breweries"."id" ASC LIMIT 1
+=> #<Brewery:0x005598db600710
+ id: 1,
+ name: "Koff",
+ year: 1897,
+ created_at: Sat, 28 Jan 2017 12:59:18 UTC +00:00,
+ updated_at: Sat, 28 Jan 2017 12:59:18 UTC +00:00>
+[23] pry(main)> Beer.create name:"iso IV", style:"Lager", brewery_id:k.id
+   (0.3ms)  begin transaction
+  SQL (0.6ms)  INSERT INTO "beers" ("name", "style", "brewery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "iso IV"], ["style", "Lager"], ["brewery_id", 1], ["created_at", "2017-01-28 13:11:49.396321"], ["updated_at", "2017-01-28 13:11:49.396321"]]
+   (14.3ms)  commit transaction
+=> #<Beer:0x005598db66b790
+ id: 8,
+ name: "iso IV",
+ style: "Lager",
+ brewery_id: 1,
+ created_at: Sat, 28 Jan 2017 13:11:49 UTC +00:00,
+ updated_at: Sat, 28 Jan 2017 13:11:49 UTC +00:00>
+[24] pry(main)> b = Brewery.where name:"Koff"
+  Brewery Load (0.2ms)  SELECT "breweries".* FROM "breweries" WHERE "breweries"."name" = ?  [["name", "Koff"]]
+=> [#<Brewery:0x005598db723ae8
+  id: 1,
+  name: "Koff",
+  year: 1897,
+  created_at: Sat, 28 Jan 2017 12:59:18 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 12:59:18 UTC +00:00>]
+[25] pry(main)> b = Brewery.where name:"BrewDog"
+  Brewery Load (0.1ms)  SELECT "breweries".* FROM "breweries" WHERE "breweries"."name" = ?  [["name", "BrewDog"]]
+=> [#<Brewery:0x005598db77d7a0
+  id: 4,
+  name: "BrewDog",
+  year: 2007,
+  created_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00>]
+[26] pry(main)> Beer.create name:"Punk IPA", style:"IPA", b.id
+SyntaxError: unexpected '\n', expecting =>
+[26] pry(main)> Beer.create name:"Punk IPA", style:"IPA", brewery_id:b.id
+NoMethodError: undefined method `id' for #<Brewery::ActiveRecord_Relation:0x005598db775050>
+Did you mean?  ids
+from /home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.7/lib/active_record/relation/delegation.rb:136:in `method_missing'
+[27] pry(main)> k = Brewery.where name:"Koff"
+  Brewery Load (0.1ms)  SELECT "breweries".* FROM "breweries" WHERE "breweries"."name" = ?  [["name", "Koff"]]
+=> [#<Brewery:0x005598db883910
+  id: 1,
+  name: "Koff",
+  year: 1897,
+  created_at: Sat, 28 Jan 2017 12:59:18 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 12:59:18 UTC +00:00>]
+[28] pry(main)> k
+=> [#<Brewery:0x005598db883910
+  id: 1,
+  name: "Koff",
+  year: 1897,
+  created_at: Sat, 28 Jan 2017 12:59:18 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 12:59:18 UTC +00:00>]
+[29] pry(main)> b
+=> [#<Brewery:0x005598db77d7a0
+  id: 4,
+  name: "BrewDog",
+  year: 2007,
+  created_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00>]
+[30] pry(main)> Beer.create name:"iso IVB", style:"Lager", brewery_id:k.id
+NoMethodError: undefined method `id' for #<Brewery::ActiveRecord_Relation:0x005598db87b210>
+Did you mean?  ids
+from /home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.7/lib/active_record/relation/delegation.rb:136:in `method_missing'
+[31] pry(main)> b
+=> [#<Brewery:0x005598db77d7a0
+  id: 4,
+  name: "BrewDog",
+  year: 2007,
+  created_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 13:03:40 UTC +00:00>]
+[32] pry(main)> Beer.create name:"Punk IPA", style:"IPA", brewery_id:b.first.id
+   (0.1ms)  begin transaction
+  SQL (0.2ms)  INSERT INTO "beers" ("name", "style", "brewery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Punk IPA"], ["style", "IPA"], ["brewery_id", 4], ["created_at", "2017-01-28 13:16:29.963131"], ["updated_at", "2017-01-28 13:16:29.963131"]]
+   (20.2ms)  commit transaction
+=> #<Beer:0x005598dba57ef8
+ id: 9,
+ name: "Punk IPA",
+ style: "IPA",
+ brewery_id: 4,
+ created_at: Sat, 28 Jan 2017 13:16:29 UTC +00:00,
+ updated_at: Sat, 28 Jan 2017 13:16:29 UTC +00:00>
+[33] pry(main)> Beer.create name:"Nanny State", style:"lowalcohol", brewery_id:b.first.id
+   (0.1ms)  begin transaction
+  SQL (0.2ms)  INSERT INTO "beers" ("name", "style", "brewery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Nanny State"], ["style", "lowalcohol"], ["brewery_id", 4], ["created_at", "2017-01-28 13:17:01.881843"], ["updated_at", "2017-01-28 13:17:01.881843"]]
+   (15.9ms)  commit transaction
+=> #<Beer:0x005598dbac7f28
+ id: 10,
+ name: "Nanny State",
+ style: "lowalcohol",
+ brewery_id: 4,
+ created_at: Sat, 28 Jan 2017 13:17:01 UTC +00:00,
+ updated_at: Sat, 28 Jan 2017 13:17:01 UTC +00:00>
+[34] pry(main)> Beer.where brewery_id:4
+  Beer Load (0.2ms)  SELECT "beers".* FROM "beers" WHERE "beers"."brewery_id" = ?  [["brewery_id", 4]]
+=> [#<Beer:0x005598dbb35938
+  id: 9,
+  name: "Punk IPA",
+  style: "IPA",
+  brewery_id: 4,
+  created_at: Sat, 28 Jan 2017 13:16:29 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 13:16:29 UTC +00:00>,
+ #<Beer:0x005598dbb357f8
+  id: 10,
+  name: "Nanny State",
+  style: "lowalcohol",
+  brewery_id: 4,
+  created_at: Sat, 28 Jan 2017 13:17:01 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 13:17:01 UTC +00:00>]
+[35] pry(main)> bd = Beer.where brewery_id:4
+  Beer Load (0.1ms)  SELECT "beers".* FROM "beers" WHERE "beers"."brewery_id" = ?  [["brewery_id", 4]]
+=> [#<Beer:0x005598dbbd23f0
+  id: 9,
+  name: "Punk IPA",
+  style: "IPA",
+  brewery_id: 4,
+  created_at: Sat, 28 Jan 2017 13:16:29 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 13:16:29 UTC +00:00>,
+ #<Beer:0x005598dbbd22b0
+  id: 10,
+  name: "Nanny State",
+  style: "lowalcohol",
+  brewery_id: 4,
+  created_at: Sat, 28 Jan 2017 13:17:01 UTC +00:00,
+  updated_at: Sat, 28 Jan 2017 13:17:01 UTC +00:00>]
+[36] pry(main)> bd.first.ratings.create score:14
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 14], ["beer_id", 9], ["created_at", "2017-01-28 13:18:45.648661"], ["updated_at", "2017-01-28 13:18:45.648661"]]
+   (14.4ms)  commit transaction
+=> #<Rating:0x005598d849a518
+ id: 4,
+ score: 14,
+ beer_id: 9,
+ created_at: Sat, 28 Jan 2017 13:18:45 UTC +00:00,
+ updated_at: Sat, 28 Jan 2017 13:18:45 UTC +00:00>
+[37] pry(main)> bd.first.ratings.create score:22
+   (0.1ms)  begin transaction
+  SQL (0.2ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 22], ["beer_id", 9], ["created_at", "2017-01-28 13:18:53.490718"], ["updated_at", "2017-01-28 13:18:53.490718"]]
+   (14.6ms)  commit transaction
+=> #<Rating:0x005598d88e8138
+ id: 5,
+ score: 22,
+ beer_id: 9,
+ created_at: Sat, 28 Jan 2017 13:18:53 UTC +00:00,
+ updated_at: Sat, 28 Jan 2017 13:18:53 UTC +00:00>
+[38] pry(main)> bd.first.ratings.create score:13
+   (0.1ms)  begin transaction
+  SQL (0.2ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 13], ["beer_id", 9], ["created_at", "2017-01-28 13:18:57.102666"], ["updated_at", "2017-01-28 13:18:57.102666"]]
+   (15.8ms)  commit transaction
+=> #<Rating:0x005598d98c90c0
+ id: 6,
+ score: 13,
+ beer_id: 9,
+ created_at: Sat, 28 Jan 2017 13:18:57 UTC +00:00,
+ updated_at: Sat, 28 Jan 2017 13:18:57 UTC +00:00>
+[39] pry(main)> bd.second.ratings.create score:11
+   (0.1ms)  begin transaction
+  SQL (0.2ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 11], ["beer_id", 10], ["created_at", "2017-01-28 13:19:09.343516"], ["updated_at", "2017-01-28 13:19:09.343516"]]
+   (14.0ms)  commit transaction
+=> #<Rating:0x005598d99ba998
+ id: 7,
+ score: 11,
+ beer_id: 10,
+ created_at: Sat, 28 Jan 2017 13:19:09 UTC +00:00,
+ updated_at: Sat, 28 Jan 2017 13:19:09 UTC +00:00>
+[40] pry(main)> bd.second.ratings.create score:24
+   (0.1ms)  begin transaction
+  SQL (0.2ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 24], ["beer_id", 10], ["created_at", "2017-01-28 13:19:12.314680"], ["updated_at", "2017-01-28 13:19:12.314680"]]
+   (14.0ms)  commit transaction
+=> #<Rating:0x005598d9ad5328
+ id: 8,
+ score: 24,
+ beer_id: 10,
+ created_at: Sat, 28 Jan 2017 13:19:12 UTC +00:00,
+ updated_at: Sat, 28 Jan 2017 13:19:12 UTC +00:00>
+[41] pry(main)> 
+
