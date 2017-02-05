@@ -1,7 +1,21 @@
 class Brewery < ActiveRecord::Base
   include RatingAverage
+  validates :name, presence: true
+  validate :year_check
+=begin
+  validates :year, numericality: { greater_than_or_equal_to: 1042,
+                                   less_than_or_equal_to: 2017,
+                                   only_integer: true}
+=end
+
   has_many :beers, dependent: :destroy
   has_many :ratings, through: :beers
+
+  def year_check
+    errors.add(:year, "year must be between 1042 and #{Time.now.year}") if
+        year < 1042 or year > Time.now.year
+  end
+
 
   def print_report
     puts name
