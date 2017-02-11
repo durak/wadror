@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   #get 'ratings/new', to: 'ratings#new'
   #post 'ratings', to: 'ratings#create'
   resources :ratings, only: [:index, :new, :create, :destroy]
+  resources :beer_clubs
+  resources :memberships
+
 
   get 'signup', to: 'users#new'
   resource :session, only: [:new, :create, :destroy]
