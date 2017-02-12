@@ -10,6 +10,9 @@
     <p>No rated beers yet!</p>
 <% else %>
     <p>Has <%= pluralize(@user.ratings.count, 'rating', 'ratings')%>, average <%= @user.average_rating %></p>
+    <p>Favourite style: <%= @user.favourite_style %></p>
+    <p>Favourite beer: <%= @user.favourite_beer %></p>
+    <p>Favourite brewery: <%= @user.favourite_brewery.name %></p>
     <ul>
       <% @user.ratings.each do |rating| %>
           <li>

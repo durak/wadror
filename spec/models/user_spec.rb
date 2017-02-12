@@ -47,9 +47,65 @@ RSpec.describe User, type: :model do
       create_beers_with_ratings(user, 10, 20, 15)
       best = create_beer_with_rating(user, 25)
 
-
       expect(user.favourite_beer).to eq(best)
     end
+
+  end
+
+  describe "favourite style" do
+    !let(:user){FactoryGirl.create(:user)}
+
+    it "has method for determining one" do
+      expect(user).to respond_to(:favourite_style)
+    end
+
+    it "without rated beers does not have one" do
+      expect(user.favourite_style).to eq(nil)
+    end
+
+    it "with one rated beer is style of this rated beer" do
+      beer = create_beer_with_rating(user, 10)
+
+      expect(user.favourite_style).to eq(beer.style)
+    end
+
+    it "with multiple rated beers is the one with highest average of ratings" do
+      beer1 = FactoryGirl.create(:beer, style: 'Lager')
+      beer2 = FactoryGirl.create(:beer, style: 'Weizen')
+      rating1 = FactoryGirl.create(:rating, beer: beer1, user:user)
+      rating2 = FactoryGirl.create(:rating, beer: beer1, user:user)
+      rating3 = FactoryGirl.create(:rating2, beer: beer2, user:user)
+
+      expect(user.favourite_style).to eq('Weizen')
+
+    end
+
+  end
+
+  describe "favourite brewery" do
+    !let(:user){FactoryGirl.create(:user)}
+    !let(:brewery1){FactoryGirl.create(:brewery)}
+    !let(:brewery2){FactoryGirl.create(:brewery, name:'best')}
+
+    it "has method for determining one" do
+      expect(user).to respond_to(:favourite_brewery)
+    end
+
+    it "without rated beers does not have one" do
+      expect(user.favourite_brewery).to eq(nil)
+    end
+
+
+    it "is one with highest average rating" do
+      beer1 = FactoryGirl.create(:beer, style: 'Lager', brewery: brewery1)
+      beer2 = FactoryGirl.create(:beer, style: 'Weizen', brewery: brewery2)
+      rating1 = FactoryGirl.create(:rating, beer: beer1, user:user)
+      rating2 = FactoryGirl.create(:rating, beer: beer1, user:user)
+      rating3 = FactoryGirl.create(:rating2, beer: beer2, user:user)
+
+      expect(user.favourite_brewery).to eq(brewery2)
+    end
+
 
   end
 

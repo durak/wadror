@@ -3,8 +3,13 @@ include Helpers
 
 describe "Beer" do
   let!(:brewery) { FactoryGirl.create :brewery, name:"NewBrewery" }
+  let!(:user) { FactoryGirl.create :user }
 
-  it "can be created from web form by anyone" do
+  before :each do
+    sign_in(username:"Pekka", password:"Foobar1")
+  end
+
+  it "can be created from web form by signed in user" do
     visit new_beer_path
     fill_in('beer[name]', with:'Beer III')
     select('NewBrewery', from:'beer[brewery_id]')
