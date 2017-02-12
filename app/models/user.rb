@@ -11,4 +11,9 @@ class User < ActiveRecord::Base
   has_many :beer_clubs, through: :memberships
 
 
+  def favourite_beer
+    return nil if ratings.empty?
+    ratings.order(score: :desc).limit(1).first.beer
+  end
+
 end
