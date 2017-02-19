@@ -1,5 +1,6 @@
 # tämä rivi tarvitaan jotta api toimii herokussa ja travisissa
 require 'beermapping_api'
+require 'apixu_weather'
 
 class PlacesController < ApplicationController
 
