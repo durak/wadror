@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
     favStyle = nil
 
     stylesRated.each do |style|
-      styleAvg = ratings.includes("beer").where(beers: {style: style}).average("ratings.score")
+      styleAvg = ratings.includes("beer").where(beers: {style_id: style}).average("ratings.score")
       if styleAvg > highestAvg
         highestAvg = styleAvg and favStyle = style
       end

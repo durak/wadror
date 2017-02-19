@@ -38,6 +38,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         1,
@@ -96,6 +97,7 @@
         null
       ],
       "/home/itkoskin/Documents/Projects/ratebeer/app/models/style.rb": [
+        1,
         1,
         null
       ],
@@ -252,8 +254,8 @@
         null,
         null,
         1,
-        49,
-        14,
+        55,
+        20,
         null,
         null,
         1,
@@ -797,6 +799,6 @@
         0
       ]
     },
-    "timestamp": 1487529946
+    "timestamp": 1487531565
   }
 }
