@@ -521,6 +521,7 @@
         0,
         null,
         null,
+        1,
         null,
         1,
         5,
@@ -824,8 +825,23 @@
         0,
         0,
         0
+      ],
+      "/home/itkoskin/Documents/Projects/ratebeer/lib/apixu_weather.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1487534708
+    "timestamp": 1487536921
   }
 }

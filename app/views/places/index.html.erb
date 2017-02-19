@@ -7,6 +7,16 @@
     <%= submit_tag "Search" %>
 <% end %>
 
+<% if @weather %>
+    <p>Current weather in <%= @weather["name"] %>:
+      <br>
+      <%= @weather["text"] %>, <%= @weather["temp"] %> Celsius
+    </p>
+
+    <img src="http:<%=@weather["icon"] %>">
+    <p></p>
+<% end %>
+
 <% if @places %>
     <table>
       <thead>

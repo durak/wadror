@@ -5,6 +5,7 @@ class PlacesController < ApplicationController
 
   def index
 
+
   end
 
   def search
@@ -13,6 +14,7 @@ class PlacesController < ApplicationController
       redirect_to places_path, notice: "No locations in #{params[:city]}"
     else
       session[:city] = params[:city]
+      @weather = ApixuWeather.weather_in(session[:city])
       render :index
     end
   end
@@ -20,6 +22,7 @@ class PlacesController < ApplicationController
   def show
     city = session[:city]
     id = params[:id]
+
     @place = BeermappingApi.place(city, id).first
     if @place.nil?
       redirect_to places_path, notice: "No location found"

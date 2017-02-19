@@ -28,6 +28,7 @@ class BeermappingApi
     places.select {|p| p.id == id}
   end
 
+  private
 
   def self.key
     raise "BEERAPIKEY env variable not defined" if ENV['BEERAPIKEY'].nil?

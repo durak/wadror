@@ -48,6 +48,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'travis'
 gem 'httparty'
+gem 'apixu', :git => 'https://github.com/apixu/apixu-ruby'
 
 
 group :development, :test do
