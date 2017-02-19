@@ -16,11 +16,15 @@
       </thead>
 
       <% @places.each do |place| %>
-        <tr>
-          <% Place.rendered_fields.each do |f| %>
-          <td><%= place.send(f) %></td>
-          <% end %>
-        </tr>
+          <tr>
+            <% Place.rendered_fields.each do |f| %>
+                <% if f == Place.rendered_fields[1] %>
+                 <td><%= link_to place.name, place_path(place.id) %></td>
+                 <% else %>
+                <td><%= place.send(f) %></td>
+                 <% end %>
+            <% end %>
+          </tr>
       <% end %>
     </table>
 <% end %>

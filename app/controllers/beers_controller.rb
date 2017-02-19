@@ -12,6 +12,9 @@ class BeersController < ApplicationController
   # GET /beers/1
   # GET /beers/1.json
   def show
+    # luodaan valmiiksi reittausolio siltä varalta, että olut reitataan näkymässä
+    @rating = Rating.new
+    @rating.beer = @beer
   end
 
   # GET /beers/new

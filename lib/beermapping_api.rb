@@ -5,8 +5,6 @@ class BeermappingApi
     Rails.cache.fetch(city, expires_in:24.hours) { fetch_places_in(city) }
   end
 
-
-
   def self.fetch_places_in(city)
     url = "http://beermapping.com/webservice/loccity/#{key}/"
 
@@ -23,7 +21,11 @@ class BeermappingApi
     places.map do | place |
       Place.new(place)
     end
+  end
 
+  def self.place(city, id)
+    places = places_in(city)
+    places.select {|p| p.id == id}
   end
 
 
