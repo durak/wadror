@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   delete 'signout', to: 'sessions#destroy'
 
   get 'places', to: 'places#index'
+  get 'places/:id', to:'places#show'
   post 'places', to:'places#search'
 
 
