@@ -6,6 +6,9 @@ describe 'Places' do
     allow(BeermappingApi).to receive(:places_in).with("kumpula").and_return(
         [ Place.new( name:"Oljenkorsi", id:1)]
     )
+    allow(ApixuWeather).to receive(:weather_in).with("kumpula").and_return(
+        {"name"=>"Helsinki", "temp"=>3.0, "text"=>"Partly cloudy", "icon"=>"//cdn.apixu.com/weather/64x64/night/116.png"}
+    )
     visit places_path
     fill_in('city', with: "kumpula")
     click_button "Search"
@@ -17,6 +20,10 @@ describe 'Places' do
     allow(BeermappingApi).to receive(:places_in).with("kumpula").and_return(
         [ Place.new( name:"Oljenkorsi", id:1), Place.new( name:"Unicafe", id:2)]
     )
+    allow(ApixuWeather).to receive(:weather_in).with("kumpula").and_return(
+        {"name"=>"Helsinki", "temp"=>3.0, "text"=>"Partly cloudy", "icon"=>"//cdn.apixu.com/weather/64x64/night/116.png"}
+    )
+
     visit places_path
     fill_in('city', with: "kumpula")
     click_button "Search"

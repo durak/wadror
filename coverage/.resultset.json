@@ -537,13 +537,35 @@
         null,
         null
       ],
+      "/home/itkoskin/Documents/Projects/ratebeer/lib/apixu_weather.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
       "/home/itkoskin/Documents/Projects/ratebeer/app/controllers/places_controller.rb": [
         null,
         1,
-        null,
         1,
         null,
         1,
+        null,
+        1,
+        null,
         null,
         null,
         null,
@@ -554,12 +576,14 @@
         null,
         2,
         2,
+        2,
         null,
         null,
         null,
         1,
         0,
         0,
+        null,
         0,
         0,
         0,
@@ -825,23 +849,8 @@
         0,
         0,
         0
-      ],
-      "/home/itkoskin/Documents/Projects/ratebeer/lib/apixu_weather.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1487536921
+    "timestamp": 1487543257
   }
 }
