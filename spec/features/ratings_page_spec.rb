@@ -2,6 +2,7 @@ require 'rails_helper'
 include Helpers
 
 describe "Rating" do
+  let!(:style) { FactoryGirl.create :style }
   let!(:brewery) { FactoryGirl.create :brewery, name:"Koff" }
   let!(:beer1) { FactoryGirl.create :beer, name:"iso 3", brewery:brewery }
   let!(:beer2) { FactoryGirl.create :beer, name:"Karhu", brewery:brewery }
@@ -41,6 +42,7 @@ describe "Rating" do
 end
 
 describe "Ratings" do
+  let!(:style) { FactoryGirl.create :style }
   let!(:brewery) { FactoryGirl.create :brewery, name:"Koff" }
   let!(:beer1) { FactoryGirl.create :beer, name:"iso 3", brewery:brewery }
   let!(:beer2) { FactoryGirl.create :beer, name:"Karhu", brewery:brewery }

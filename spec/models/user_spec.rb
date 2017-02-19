@@ -64,19 +64,22 @@ RSpec.describe User, type: :model do
     end
 
     it "with one rated beer is style of this rated beer" do
+      style = FactoryGirl.create(:style)
       beer = create_beer_with_rating(user, 10)
 
-      expect(user.favourite_style).to eq(beer.style)
+      expect(user.favourite_style.id).to eq(style.id)
     end
 
     it "with multiple rated beers is the one with highest average of ratings" do
-      beer1 = FactoryGirl.create(:beer, style: 'Lager')
-      beer2 = FactoryGirl.create(:beer, style: 'Weizen')
+      style = FactoryGirl.create(:style)
+      favStyle = FactoryGirl.create(:style)
+      beer1 = FactoryGirl.create(:beer, style_id: 1)
+      beer2 = FactoryGirl.create(:beer, style_id: 2)
       rating1 = FactoryGirl.create(:rating, beer: beer1, user:user)
       rating2 = FactoryGirl.create(:rating, beer: beer1, user:user)
       rating3 = FactoryGirl.create(:rating2, beer: beer2, user:user)
 
-      expect(user.favourite_style).to eq('Weizen')
+      expect(user.favourite_style.id).to eq(2)
 
     end
 
@@ -97,8 +100,8 @@ RSpec.describe User, type: :model do
 
 
     it "is one with highest average rating" do
-      beer1 = FactoryGirl.create(:beer, style: 'Lager', brewery: brewery1)
-      beer2 = FactoryGirl.create(:beer, style: 'Weizen', brewery: brewery2)
+      beer1 = FactoryGirl.create(:beer, brewery: brewery1)
+      beer2 = FactoryGirl.create(:beer, brewery: brewery2)
       rating1 = FactoryGirl.create(:rating, beer: beer1, user:user)
       rating2 = FactoryGirl.create(:rating, beer: beer1, user:user)
       rating3 = FactoryGirl.create(:rating2, beer: beer2, user:user)
