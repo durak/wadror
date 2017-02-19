@@ -47,6 +47,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 gem 'travis'
+gem 'httparty'
 
 
 group :development, :test do
