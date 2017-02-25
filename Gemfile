@@ -50,6 +50,11 @@ gem 'travis'
 gem 'httparty'
 gem 'apixu', :git => 'https://github.com/apixu/apixu-ruby'
 
+gem 'bootstrap-sass'
+group :development do
+  gem 'rails_layout'
+end
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
