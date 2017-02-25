@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user_admin
+    return nil if session[:user_id].nil?
     current_user.admin
   end
 

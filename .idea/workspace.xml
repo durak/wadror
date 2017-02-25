@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc68a11d-72e9-4d77-af15-ffaaf2f0df80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/beers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/beers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/breweries_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/breweries_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/styles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/styles_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/users_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/users_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/beers/show.html.erb" afterPath="$PROJECT_DIR$/app/views/beers/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/breweries/show.html.erb" afterPath="$PROJECT_DIR$/app/views/breweries/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ratings/_top_averages.html.erb" afterPath="$PROJECT_DIR$/app/views/ratings/_top_averages.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/new.html" afterPath="$PROJECT_DIR$/app/views/sessions/new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/styles/show.html.erb" afterPath="$PROJECT_DIR$/app/views/styles/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.last_run.json" afterPath="$PROJECT_DIR$/coverage/.last_run.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.resultset.json" afterPath="$PROJECT_DIR$/coverage/.resultset.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index.html" afterPath="$PROJECT_DIR$/coverage/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -56,17 +42,17 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/breweries_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="75" column="4" lean-forward="true" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="80" />
+              <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="80" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="86" column="53" lean-forward="false" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+            <state relative-caret-position="165">
+              <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -76,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/breweries/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="29" column="74" lean-forward="true" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="88" />
+              <caret line="29" column="74" lean-forward="false" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -86,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="262">
-              <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="32" />
+              <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -122,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="255">
+              <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -136,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -215,11 +201,11 @@
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/users_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       </list>
     </option>
   </component>
@@ -477,7 +463,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="inde&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/users/index.html.erb&#10;sess&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/sessions_controller.rb&#10;app&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/application_controller.rb&#10;user&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/users_controller.rb&#10;show&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/users/show.html.erb&#10;brewe&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/breweries_controller.rb&#10;routes&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/config/routes.rb&#10;ser&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/user.rb&#10;route&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/config/routes.rb&#10;style&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/styles_controller.rb&#10;bre&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/breweries_controller.rb&#10;beer&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/beers_controller.rb&#10;rat&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/concerns/rating_average.rb&#10;bee&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/beers_controller.rb&#10;styl&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/styles_controller.rb&#10;ratin&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/rating.rb&#10;rating&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/rating.rb&#10;sty&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/style.rb&#10;ratings&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/ratings_controller.rb&#10;atings&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/ratings_controller.rb&#10;brewer&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/brewery.rb&#10;rewe&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/brewery.rb&#10;css&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/assets/stylesheets/application.css&#10;gemf&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;gemfile&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;beers&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/beers_controller.rb&#10;new&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/ratings/new.html.erb&#10;nde&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/beer_clubs/index.html.erb&#10;beerm&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/lib/beermapping_api.rb&#10;test&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/config/environments/test.rb&#10;rails&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/spec/rails_helper.rb&#10;gem&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;pla&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/places_controller.rb&#10;place&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/places_controller.rb&#10;rout&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/config/routes.rb&#10;beer_&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/beers_controller.rb&#10;gemfi&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;emfil&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;ge&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;form&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/users/_form.html.erb&#10;helper&#9;null&#9;null&#10;ati&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/rating.rb&#10;rati&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/ratings_controller.rb&#10;use&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/users_controller.rb&#10;show.&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/users/show.html.erb&#10;activeR&#9;FILE&#9;file:///home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails-4.2.7/guides/source/active_record_basics.md&#10;ActiveR&#9;FILE&#9;file:///home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.7/lib/active_record.rb&#10;root&#9;null&#9;null&#10;edirect_to&#9;null&#9;null&#10;redirect_to&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="app&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/application_controller.rb&#10;inde&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/users/index.html.erb&#10;sess&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/sessions_controller.rb&#10;user&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/users_controller.rb&#10;show&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/users/show.html.erb&#10;brewe&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/breweries_controller.rb&#10;routes&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/config/routes.rb&#10;ser&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/user.rb&#10;route&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/config/routes.rb&#10;style&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/styles_controller.rb&#10;bre&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/breweries_controller.rb&#10;beer&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/beers_controller.rb&#10;rat&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/concerns/rating_average.rb&#10;bee&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/beers_controller.rb&#10;styl&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/styles_controller.rb&#10;ratin&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/rating.rb&#10;rating&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/rating.rb&#10;sty&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/style.rb&#10;ratings&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/ratings_controller.rb&#10;atings&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/ratings_controller.rb&#10;brewer&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/brewery.rb&#10;rewe&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/brewery.rb&#10;css&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/assets/stylesheets/application.css&#10;gemf&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;gemfile&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;beers&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/beers_controller.rb&#10;new&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/ratings/new.html.erb&#10;nde&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/beer_clubs/index.html.erb&#10;beerm&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/lib/beermapping_api.rb&#10;test&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/config/environments/test.rb&#10;rails&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/spec/rails_helper.rb&#10;gem&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;pla&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/places_controller.rb&#10;place&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/places_controller.rb&#10;rout&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/config/routes.rb&#10;beer_&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/beers_controller.rb&#10;gemfi&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;emfil&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;ge&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/Gemfile&#10;form&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/users/_form.html.erb&#10;helper&#9;null&#9;null&#10;ati&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/models/rating.rb&#10;rati&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/ratings_controller.rb&#10;use&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/controllers/users_controller.rb&#10;show.&#9;FILE&#9;file:///home/itkoskin/Documents/Projects/ratebeer/app/views/users/show.html.erb&#10;activeR&#9;FILE&#9;file:///home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails-4.2.7/guides/source/active_record_basics.md&#10;ActiveR&#9;FILE&#9;file:///home/itkoskin/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-4.2.7/lib/active_record.rb&#10;root&#9;null&#9;null&#10;edirect_to&#9;null&#9;null&#10;redirect_to&#9;null&#9;null" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -699,12 +685,12 @@
       <workItem from="1486828729651" duration="36804000" />
       <workItem from="1487453298087" duration="48075000" />
       <workItem from="1487585710876" duration="101000" />
-      <workItem from="1487981974899" duration="28496000" />
+      <workItem from="1487981974899" duration="29416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201030000" />
+    <option name="totallyTimeSpent" value="201950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
@@ -1084,7 +1070,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/breweries_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="75" column="4" lean-forward="true" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="80" />
+          <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -1100,15 +1086,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/breweries/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="29" column="74" lean-forward="true" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <caret line="29" column="74" lean-forward="false" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="88" />
           <folding />
         </state>
       </provider>
@@ -1116,7 +1094,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1124,7 +1102,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
-          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="32" />
+          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1147,8 +1125,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="86" column="53" lean-forward="false" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
           <folding />
         </state>
       </provider>
