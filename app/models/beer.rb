@@ -9,7 +9,7 @@ class Beer < ActiveRecord::Base
   validates :style_id, presence: true
 
   scope :top, -> (n) { joins('LEFT JOIN "ratings" ON "ratings"."beer_id" = "beers"."id"')
-                           .group('beer_id')
+                           .group('"beers"."id"')
                            .order('AVG(ratings.score) DESC')
                            .first(n) }
 
