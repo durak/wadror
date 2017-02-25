@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   has_many :beer_clubs, through: :memberships
 
   scope :top_raters, -> (n) { joins(:ratings)
-                                  .group(:user_id)
+                                  .group(:id)
                                   .order('COUNT(ratings.id) desc')
                                   .first(n) }
 
