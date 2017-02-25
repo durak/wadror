@@ -6,6 +6,9 @@ class Rating < ActiveRecord::Base
                                     less_than_or_equal_to: 50,
                                     only_integer: true}
 
+  scope :recent, -> (n) {order(:id).reverse_order.first(n)}
+
+
   def to_s
     self.beer.name + ", " + self.score.to_s
   end

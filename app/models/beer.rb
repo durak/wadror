@@ -8,9 +8,11 @@ class Beer < ActiveRecord::Base
   validates :name, presence: true
   validates :style_id, presence: true
 
-#  def average_rating
-#    self.ratings.average(:score)
-#  end
+  scope :top, -> (n) { joins('LEFT JOIN "ratings" ON "ratings"."beer_id" = "beers"."id"')
+                           .group('beer_id')
+                           .order('AVG(ratings.score) DESC')
+                           .first(n) }
+
 
   def to_s
     self.brewery.name + ", " + self.name

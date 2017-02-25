@@ -10,6 +10,11 @@ class User < ActiveRecord::Base
   has_many :memberships, dependent: :destroy
   has_many :beer_clubs, through: :memberships
 
+  scope :top_raters, -> (n) { joins(:ratings)
+                                  .group(:user_id)
+                                  .order('COUNT(ratings.id) desc')
+                                  .first(n) }
+
 
   def favourite_beer
     return nil if ratings.empty?

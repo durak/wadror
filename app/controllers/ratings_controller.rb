@@ -1,6 +1,11 @@
 class RatingsController < ApplicationController
   def index
-    @ratings = Rating.all
+    @ratings = Rating.recent 3
+    @breweries_top = Brewery.top 3
+    @beers_top = Beer.top 3
+    @styles_top = Style.top 3
+    @users_top = User.top_raters 3
+
     #turha, tapahtuu aina automaattisesti railsissa: metodi index renderöi aina lopuksi automaatisesti index-näkymän
     render :index    # renderöin näkymätemplate /app/views/ratings/index.html
   end

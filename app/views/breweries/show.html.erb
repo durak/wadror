@@ -2,7 +2,10 @@
 
 <p>
   <!--<strong>Name:</strong>-->
-  <h2><%= @brewery.name %></h2>
+<h2><%= @brewery.name %></h2>
+<% if not @brewery.active  %>
+    <span class="label label-info">retired</span>
+<% end %>
 </p>
 
 <p>
