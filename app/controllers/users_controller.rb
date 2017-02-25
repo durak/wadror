@@ -45,7 +45,7 @@ class UsersController < ApplicationController
         if current_user == @user and user_params[:username].nil?
             updatePermitted = @user.update(user_params)
         else
-          format.html { redirect_to :root, notice: 'Not allowed MOFO!' }
+          format.html { redirect_to :root, notice: 'Not allowed!' }
         end
 
         if updatePermitted
@@ -77,6 +77,14 @@ class UsersController < ApplicationController
       end
 
     end
+  end
+
+  def toggle_freeze
+    user = User.find(params[:id])
+    user.update_attribute :blocked, (not user.blocked)
+    new_status = user.blocked? ? "frozen" : "active"
+
+    redirect_to :back, notice:"user #{user.username}, status changed to #{new_status}"
   end
 
   private

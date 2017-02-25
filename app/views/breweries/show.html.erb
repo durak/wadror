@@ -24,8 +24,10 @@
 <% if @brewery.ratings.empty? %>
     <p>Brewery has not yet been rated!</p>
 <% else %>
-    <p>Has <%= pluralize(@brewery.ratings.count, 'rating', 'ratings')%>, average <%= @brewery.average_rating %></p>
+    <p>Has <%= pluralize(@brewery.ratings.count, 'rating', 'ratings')%>, average <%= round(@brewery.average_rating) %></p>
 <% end %>
 
-<%= link_to 'Edit', edit_brewery_path(@brewery) if current_user%> |
+<%= link_to "change activity", toggle_activity_brewery_path(@brewery.id), method: :post, class: "btn btn-primary" %>
+<%= edit_and_destroy_buttons(@brewery) %>
+
 <%= link_to 'Back', breweries_path %>
